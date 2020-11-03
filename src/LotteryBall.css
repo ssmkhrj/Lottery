@@ -2,7 +2,7 @@
   background-color: tomato;
   border-radius: 50%;
   color: whitesmoke;
-  display: inline-block;
+  /* display: inline-block; */
   width: 4rem;
   height: 4rem;
   padding: 1rem;

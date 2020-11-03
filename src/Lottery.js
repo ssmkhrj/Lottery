@@ -34,7 +34,7 @@ class Lottery extends Component {
     return (
       <section className="Lottery">
         <h1>{this.props.title}</h1>
-        <div>
+        <div className="Lottery-container">
           {this.state.balls.map((n) => (
             <LotteryBall num={n} />
           ))}

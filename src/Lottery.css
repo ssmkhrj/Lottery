@@ -5,6 +5,12 @@
   border-radius: 1rem;
 }
 
+.Lottery-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .Lottery h1 {
   margin: 1rem 0;
   text-transform: uppercase;
