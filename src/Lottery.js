@@ -17,10 +17,16 @@ class Lottery extends Component {
 
   generateRandomBalls() {
     // So since we are using this.state inside setState we use the callback style to update state
+    const duplicateCheck = {};
     this.setState((curState) => ({
-      balls: this.state.balls.map(
-        (ball) => Math.floor(Math.random() * this.props.maxNum) + 1
-      ),
+      balls: this.state.balls.map((ball) => {
+        let randNum = Math.floor(Math.random() * this.props.maxNum) + 1;
+        while (duplicateCheck.hasOwnProperty(randNum)) {
+          randNum = Math.floor(Math.random() * this.props.maxNum) + 1;
+        }
+        duplicateCheck[randNum] = true;
+        return randNum;
+      }),
     }));
   }
 
